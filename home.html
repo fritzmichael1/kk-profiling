@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangguniang Kabataan Gaban</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='barangay_logo.png') }}" alt="Barangay Logo">
+        <h1>Welcome to Sangguniang Kabataan Gaban</h1>
+        <img src="{{ url_for('static', filename='sk_logo.png') }}" alt="SK Logo">
+    </header>
+    
+    <main>
+
+        <div class="home">
+            <h2>Welcome to the Official Sangguniang Kabataan Gaban</h2>
+            <p>Join the community of empowered youth! Register now and be part of the change.</p>
+        
+            <a href="{{ url_for('register') }}" class="register-button">Register Now</a>
+        </div>
+
+        <div class="events">
+            <h2>Upcoming Events</h2>
+        
+        </div>
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>The Sangguniang Kabataan (SK) of Gaban is dedicated to empowering the youth in our community. We aim to encourage active participation in local governance, foster youth development programs, and create a supportive environment where young people can thrive.
+                <br> 
+                <br> The SK works closely with the community, government organizations, and youth groups to implement programs that address the needs and aspirations of the youth. Through various initiatives, we provide opportunities for education, employment, and community service.</p>
+        </div>
+
+        <footer>
+            <p>© 2024 SANGGUNIANG KABATAAN GABAN</p>
+        </footer>
+
+        
+    </main>
+</body>
+</html>
+
+
+<style>
+    /* Resetting default margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #32CD32; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between logos and title */
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    font-size: 2rem;
+    
+}
+
+/* Main container for the home page */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.home p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.events {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.events h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.events p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: black;
+    
+}
+
+/* Button styling for the register link */
+.register-button {
+    margin-top: 30px;
+    background-color: #32CD32;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #228B22; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .register-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+</style>
