@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sangguniang Kabataan Gaban</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='sk_logo.png') }}">
 </head>
 <body>
     <header>
@@ -24,6 +25,15 @@
 
         <div class="events">
             <h2>Upcoming Events</h2>
+            <ul>
+                <li>
+                    <strong>2nd KK Assembly</strong> <br>
+                    Date: TBA <br>
+                    Location: Gaban Gymnasium <br>
+                    Description: The 2nd KK Assembly is a critical mechanism to ensure youth engagement in governance, fostering leadership and civic responsibility at the grassroots level.
+                </li>
+                
+            </ul>
         
         </div>
         <div class="about-section">
@@ -32,17 +42,17 @@
                 <br> 
                 <br> The SK works closely with the community, government organizations, and youth groups to implement programs that address the needs and aspirations of the youth. Through various initiatives, we provide opportunities for education, employment, and community service.</p>
         </div>
-
-        <footer>
-            <p>© 2024 SANGGUNIANG KABATAAN GABAN</p>
-        </footer>
-
         
     </main>
+    
+    <footer>
+        <p>© 2024 SANGGUNIANG KABATAAN GABAN</p>
+    </footer>
+    
 </body>
 </html>
 
-
+ 
 <style>
     /* Resetting default margins and paddings for all elements */
 * {
@@ -61,7 +71,7 @@ body {
 
 /* Header */
 header {
-    background-color: #32CD32; 
+    background-color: #4682B4;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -72,8 +82,8 @@ header {
 }
 
 header img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 header h1 {
@@ -83,13 +93,28 @@ header h1 {
 
 /* Main container for the home page */
 main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
 }
+
+footer {
+    background-color: #4682B4; /* Light gray background */
+    color: white; /* Dark text for readability */
+    text-align: center; /* Center the content */
+    padding: 10px 0; /* Space above and below the text */
+    font-size: 0.9rem; /* Slightly smaller text */
+    border-top: 1px solid #ddd; /* Subtle separation from the page content */
+}
+
+footer p {
+    margin: 0; /* Remove default margins */
+}
+
 
 .home {
     margin-top: 40px;
@@ -131,6 +156,15 @@ main {
     color: #555;
 }
 
+ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+li {
+    margin-bottom: 10px; 
+}
+
 .about-section {
     margin-top: 40px;
     padding: 20px;
@@ -154,7 +188,7 @@ main {
 /* Button styling for the register link */
 .register-button {
     margin-top: 30px;
-    background-color: #32CD32;
+    background-color: #4682B4;
     color: white;
     font-size: 1.2rem;
     padding: 10px 20px;
@@ -166,8 +200,9 @@ main {
 }
 
 .register-button:hover {
-    background-color: #228B22; /* Darker green on hover */
+    background-color: #1F51FF; /* Darker green on hover */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
