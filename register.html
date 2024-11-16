@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KK Profiling</title>
+    <title>Katipunan ng Kabataan Profiling</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='sk_logo.png') }}">
+
 </head>
 <body>
     <header>
@@ -13,6 +15,9 @@
     </header>
     
     <main>
+        <h1>Katipunan ng Kabataan Profiling</h1>
+        <p>Barangay Gaban, San Lorenzo, Guimaras<p>
+
         <div class="registration-container">
             <form action="{{ url_for('register') }}" method="POST">
   
@@ -30,6 +35,7 @@
 
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender" required>
+                    <option value=""></option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -43,6 +49,7 @@
 
                 <label for="civil_status">Civil Status</label>
                 <select id="civil_status" name="civil_status" required>
+                    <option value=""></option>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Widowed">Widowed</option>
@@ -55,13 +62,15 @@
 
                 <label for="youth_age_group">Youth Age Group</label>
                 <select id="youth_age_group" name="youth_age_group" required>
-                    <option value="Child">Child</option>
-                    <option value="Core">Core</option>
-                    <option value="Young">Young</option>
+                    <option value=""></option>
+                    <option value="Child Youth">Child Youth</option>
+                    <option value="Core Youth">Core Youth</option>
+                    <option value="Young Youth">Young Youth</option>
                 </select>
 
                 <label for="youth_classification">Youth Classification</label>
                 <select id="youth_classification" name="youth_classification" required>
+                    <option value=""></option>
                     <option value="In School">In School</option>
                     <option value="OSY">OSY</option>
                     <option value="Working Youth">Working Youth</option>
@@ -70,6 +79,7 @@
 
                 <label for="education_background">Education Background</label>
                 <select id="education_background" name="education_background" required>
+                    <option value=""></option>
                     <option value="Elementary Level">Elementary Level</option>
                     <option value="Elementary Graduate">Elementary Graduate</option>
                     <option value="High School Level">High School Level</option>
@@ -85,6 +95,7 @@
 
                 <label for="work_status">Work Status</label>
                 <select id="work_status" name="work_status" required>
+                    <option value=""></option>
                     <option value="Employed">Employed</option>
                     <option value="Unemployed">Unemployed</option>
                     <option value="Self-employed">Self-employed</option>
@@ -94,26 +105,30 @@
 
                 <label for="registered_sk_voter">Registered SK Voter</label>
                 <select id="registered_sk_voter" name="registered_sk_voter" required>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
+                    <option value=""></option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
                 </select>
 
                 <label for="registered_national_voter">Registered National Voter</label>
                 <select id="registered_national_voter" name="registered_national_voter" required>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
+                    <option value=""></option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
                 </select>
 
                 <label for="vote_last_sk">Did You Vote Last SK Election</label>
                 <select id="vote_last_sk" name="vote_last_sk" required>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
+                    <option value=""></option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
                 </select>
 
                 <label for="kk_assembly">Have You Attended a KK Assembly</label>
                 <select id="kk_assembly" name="kk_assembly" required>
-                    <option value="YES">YES</option>
-                    <option value="NO">NO</option>
+                    <option value=""></option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
                 </select>
 
                 <label for="kk_assembly_attendance">If Yes, How Many Times?</label>
@@ -121,7 +136,7 @@
                     <option value=""></option>
                     <option value="1-2">1-2</option>
                     <option value="3-4">3-4</option>
-                    <option value="5 AND ABOVE">5 AND ABOVE</option>
+                    <option value="5 AND ABOVE">5 and Above</option>
                 </select>
 
                 <label for="no_kk_reason">If No, Why?</label>
@@ -156,7 +171,7 @@
     
     /* Header */
     header {
-        background-color: #32CD32;
+        background-color: #1434A4;
         color: #fff;
         padding: 20px;
         display: flex;
@@ -165,8 +180,8 @@
     }
     
     header img {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         margin-right: 15px;
     }
     
@@ -176,17 +191,22 @@
     
     /* Main Container */
     main {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 20px auto;
         padding: 20px;
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
+    .main, h1, p{
+        text-align: center;
+        color: ;
+
+    }
     
     /* Registration Form Container */
     .registration-container {
-        max-width: 700px;
+        max-width: 1100px;
         margin: auto;
         padding: 40px;
         background-color: #fff;
@@ -197,7 +217,7 @@
     /* Form Layout */
     form {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         gap: 20px;
     }
     
@@ -237,7 +257,7 @@
     /* Submit Button Styling */
     form button {
         grid-column: 1 / span 2; /* Full width */
-        background-color: #32CD32;
+        background-color: #1434A4;
         color: #fff;
         font-size: 1.1rem;
         font-weight: bold;
@@ -247,7 +267,7 @@
     }
     
     form button:hover {
-        background-color: #228B22;
+        background-color: #1F51FF;
     }
     
     /* Responsive Adjustments */
